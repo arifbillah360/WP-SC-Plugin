@@ -45,8 +45,12 @@ function eaa_plugin_func2(){
 }
 
 
-
-
+//admin style assets link up
+function eaa_plugin_assets(){
+	wp_enqueue_style('style', PLUGINS_URL."/eaa-shortcode/assets/css/style.css", '' , '1.0');
+	wp_enqueue_script('mainjs', PLUGINS_URL. "/eaa-shortcode/assets/js/main.js", '', '1.1' , true );
+}
+add_action('admin_enqueue_scripts', 'eaa_plugin_assets');
 
 
 
